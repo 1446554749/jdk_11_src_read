@@ -1,0 +1,229 @@
+/*******************************************************************************
+ * Copyright (c) 1991, 2021 IBM Corp. and others
+ *
+ * This program and the accompanying materials are made available under
+ * the terms of the Eclipse Public License 2.0 which accompanies this
+ * distribution and is available at https://www.eclipse.org/legal/epl-2.0/
+ * or the Apache License, Version 2.0 which accompanies this distribution
+ * and is available at https://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * This Source Code may also be made available under the following
+ * Secondary Licenses when the conditions for such availability set
+ * forth in the Eclipse Public License, v. 2.0 are satisfied: GNU
+ * General Public License, version 2 with the GNU Classpath
+ * Exception [1] and GNU General Public License, version 2 with the
+ * OpenJDK Assembly Exception [2].
+ *
+ * [1] https://www.gnu.org/software/classpath/license.html
+ * [2] http://openjdk.java.net/legal/assembly-exception.html
+ *
+ *  SPDX-License-Identifier: EPL-2.0 OR Apache-2.0 OR GPL-2.0 WITH Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
+ *******************************************************************************/
+
+/**
+ * WARNING!!! GENERATED FILE
+ *
+ * This class is generated.
+ * Do not use the Eclipse "Organize Imports" feature on this class.
+ *
+ * It can contain user content, but that content must be delimited with the
+ * the tags
+ * [BEGIN USER IMPORTS]
+ * [END USER IMPORTS]
+ *
+ * or
+ *
+ * [BEGIN USER CODE]
+ * [END USER CODE]
+ *
+ * These tags are entered as comments.  Characters before [ and after ] are ignored.
+ * Lines between the tags are inserted into the newly generated file.
+ *
+ * IMPORTS are combined and inserted above newly generated imports.  CODE is combined
+ * and inserted immediately after the class declaration
+ *
+ * All lines outside these tags are lost and replaced with newly generated code.
+ */
+package com.ibm.j9ddr.vm29.pointer.generated;
+
+/*[BEGIN USER IMPORTS]*/
+/*[END USER IMPORTS]*/
+
+import com.ibm.j9ddr.CorruptDataException;
+import com.ibm.j9ddr.vm29.pointer.*;
+import com.ibm.j9ddr.vm29.structure.*;
+import com.ibm.j9ddr.vm29.types.*;
+
+/**
+ * Structure: MM_VerboseHandlerOutputPointer
+ *
+ * A generated implementation of a VM structure
+ *
+ * This class contains generated code and MAY contain hand written user code.
+ *
+ * Hand written user code must be contained at the top of
+ * the class file, specifically above
+ * the comment line containing WARNING!!! GENERATED CODE
+ *
+ * ALL code below the GENERATED warning will be replaced with new generated code
+ * each time the PointerGenerator utility is run.
+ *
+ * The generated code will provide getters for all elements in the MM_VerboseHandlerOutputPointer
+ * structure.  Where possible, meaningful return types are inferred.
+ *
+ * The user may add methods to provide meaningful return types where only pointers
+ * could be automatically inferred.
+ */
+@com.ibm.j9ddr.GeneratedPointerClass(structureClass=MM_VerboseHandlerOutput.class)
+public class MM_VerboseHandlerOutputPointer extends MM_BasePointer {
+
+	// NULL
+	public static final MM_VerboseHandlerOutputPointer NULL = new MM_VerboseHandlerOutputPointer(0);
+
+/*[BEGIN USER CODE]*/
+/*[END USER CODE]*/
+
+	// Do not call this constructor.  Use static method cast instead.
+	protected MM_VerboseHandlerOutputPointer(long address) {
+		super(address);
+	}
+
+	public static MM_VerboseHandlerOutputPointer cast(AbstractPointer structure) {
+		return cast(structure.getAddress());
+	}
+
+	public static MM_VerboseHandlerOutputPointer cast(UDATA udata) {
+		return cast(udata.longValue());
+	}
+
+	public static MM_VerboseHandlerOutputPointer cast(long address) {
+		if (address == 0) {
+			return NULL;
+		}
+		return new MM_VerboseHandlerOutputPointer(address);
+	}
+
+	public MM_VerboseHandlerOutputPointer add(long count) {
+		return MM_VerboseHandlerOutputPointer.cast(address + (MM_VerboseHandlerOutput.SIZEOF * count));
+	}
+
+	public MM_VerboseHandlerOutputPointer add(Scalar count) {
+		return add(count.longValue());
+	}
+
+	public MM_VerboseHandlerOutputPointer addOffset(long offset) {
+		return MM_VerboseHandlerOutputPointer.cast(address + offset);
+	}
+
+	public MM_VerboseHandlerOutputPointer addOffset(Scalar offset) {
+		return addOffset(offset.longValue());
+	}
+
+	public MM_VerboseHandlerOutputPointer sub(long count) {
+		return MM_VerboseHandlerOutputPointer.cast(address - (MM_VerboseHandlerOutput.SIZEOF * count));
+	}
+
+	public MM_VerboseHandlerOutputPointer sub(Scalar count) {
+		return sub(count.longValue());
+	}
+
+	public MM_VerboseHandlerOutputPointer subOffset(long offset) {
+		return MM_VerboseHandlerOutputPointer.cast(address - offset);
+	}
+
+	public MM_VerboseHandlerOutputPointer subOffset(Scalar offset) {
+		return subOffset(offset.longValue());
+	}
+
+	public MM_VerboseHandlerOutputPointer untag(long mask) {
+		return MM_VerboseHandlerOutputPointer.cast(address & ~mask);
+	}
+
+	public MM_VerboseHandlerOutputPointer untag() {
+		return untag(UDATA.SIZEOF - 1);
+	}
+
+	protected long sizeOfBaseType() {
+		return MM_VerboseHandlerOutput.SIZEOF;
+	}
+
+	// Implementation methods
+
+	// MM_GCExtensionsBase* _extensions
+	@com.ibm.j9ddr.GeneratedFieldAccessor(offsetFieldName="__extensionsOffset_", declaredType="MM_GCExtensionsBase*")
+	public MM_GCExtensionsBasePointer _extensions() throws CorruptDataException {
+		return MM_GCExtensionsBasePointer.cast(getPointerAtOffset(MM_VerboseHandlerOutput.__extensionsOffset_));
+	}
+
+	// MM_GCExtensionsBase* _extensions
+	public PointerPointer _extensionsEA() throws CorruptDataException {
+		return PointerPointer.cast(nonNullFieldEA(MM_VerboseHandlerOutput.__extensionsOffset_));
+	}
+
+	// MM_VerboseManager* _manager
+	@com.ibm.j9ddr.GeneratedFieldAccessor(offsetFieldName="__managerOffset_", declaredType="MM_VerboseManager*")
+	public MM_VerboseManagerPointer _manager() throws CorruptDataException {
+		return MM_VerboseManagerPointer.cast(getPointerAtOffset(MM_VerboseHandlerOutput.__managerOffset_));
+	}
+
+	// MM_VerboseManager* _manager
+	public PointerPointer _managerEA() throws CorruptDataException {
+		return PointerPointer.cast(nonNullFieldEA(MM_VerboseHandlerOutput.__managerOffset_));
+	}
+
+	// void** _mmOmrHooks
+	@com.ibm.j9ddr.GeneratedFieldAccessor(offsetFieldName="__mmOmrHooksOffset_", declaredType="void**")
+	public PointerPointer _mmOmrHooks() throws CorruptDataException {
+		return PointerPointer.cast(getPointerAtOffset(MM_VerboseHandlerOutput.__mmOmrHooksOffset_));
+	}
+
+	// void** _mmOmrHooks
+	public PointerPointer _mmOmrHooksEA() throws CorruptDataException {
+		return PointerPointer.cast(nonNullFieldEA(MM_VerboseHandlerOutput.__mmOmrHooksOffset_));
+	}
+
+	// void** _mmPrivateHooks
+	@com.ibm.j9ddr.GeneratedFieldAccessor(offsetFieldName="__mmPrivateHooksOffset_", declaredType="void**")
+	public PointerPointer _mmPrivateHooks() throws CorruptDataException {
+		return PointerPointer.cast(getPointerAtOffset(MM_VerboseHandlerOutput.__mmPrivateHooksOffset_));
+	}
+
+	// void** _mmPrivateHooks
+	public PointerPointer _mmPrivateHooksEA() throws CorruptDataException {
+		return PointerPointer.cast(nonNullFieldEA(MM_VerboseHandlerOutput.__mmPrivateHooksOffset_));
+	}
+
+	// OMR_VM* _omrVM
+	@com.ibm.j9ddr.GeneratedFieldAccessor(offsetFieldName="__omrVMOffset_", declaredType="OMR_VM*")
+	public OMR_VMPointer _omrVM() throws CorruptDataException {
+		return OMR_VMPointer.cast(getPointerAtOffset(MM_VerboseHandlerOutput.__omrVMOffset_));
+	}
+
+	// OMR_VM* _omrVM
+	public PointerPointer _omrVMEA() throws CorruptDataException {
+		return PointerPointer.cast(nonNullFieldEA(MM_VerboseHandlerOutput.__omrVMOffset_));
+	}
+
+	// MM_LightweightNonReentrantLock _reportingLock
+	@com.ibm.j9ddr.GeneratedFieldAccessor(offsetFieldName="__reportingLockOffset_", declaredType="MM_LightweightNonReentrantLock")
+	public MM_LightweightNonReentrantLockPointer _reportingLock() throws CorruptDataException {
+		return MM_LightweightNonReentrantLockPointer.cast(nonNullFieldEA(MM_VerboseHandlerOutput.__reportingLockOffset_));
+	}
+
+	// MM_LightweightNonReentrantLock _reportingLock
+	public PointerPointer _reportingLockEA() throws CorruptDataException {
+		return PointerPointer.cast(nonNullFieldEA(MM_VerboseHandlerOutput.__reportingLockOffset_));
+	}
+
+	// void** _vptr$MM_VerboseHandlerOutput
+	@com.ibm.j9ddr.GeneratedFieldAccessor(offsetFieldName="__vptr$MM_VerboseHandlerOutputOffset_", declaredType="void**")
+	public PointerPointer _vptr$MM_VerboseHandlerOutput() throws CorruptDataException {
+		return PointerPointer.cast(getPointerAtOffset(MM_VerboseHandlerOutput.__vptr$MM_VerboseHandlerOutputOffset_));
+	}
+
+	// void** _vptr$MM_VerboseHandlerOutput
+	public PointerPointer _vptr$MM_VerboseHandlerOutputEA() throws CorruptDataException {
+		return PointerPointer.cast(nonNullFieldEA(MM_VerboseHandlerOutput.__vptr$MM_VerboseHandlerOutputOffset_));
+	}
+
+}
