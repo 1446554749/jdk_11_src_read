@@ -45,7 +45,7 @@ import java.nio.channels.spi.SelectorProvider;
  * method; once connected, a socket channel remains connected until it is
  * closed.  Whether or not a socket channel is connected may be determined by
  * invoking its {@link #isConnected isConnected} method.
- *
+ *=>channel只能由以下的open方法建立，不能由随意的或已经存在的socket打开，新的channel只是open但还没connect
  * <p> Socket channels support <i>non-blocking connection:</i>&nbsp;A socket
  * channel may be created and the process of establishing the link to the
  * remote socket may be initiated via the {@link #connect connect} method for

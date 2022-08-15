@@ -395,7 +395,7 @@ public abstract class Selector implements Closeable {
      * @throws  IllegalArgumentException
      *          If the value of the timeout argument is negative
      */
-    public abstract int select(long timeout) throws IOException;//阻塞方法,注释中4种情况可能造成此方法的返回
+    public abstract int select(long timeout) throws IOException;//阻塞方法,注释中4种情况哪个先发生会造成此方法的返回
 
     /**
      * Selects a set of keys whose corresponding channels are ready for I/O

@@ -149,7 +149,7 @@ public abstract class SelectionKey {
      * concurrently with a cancellation or selection operation involving the
      * same selector.  </p>
      */
-    public abstract void cancel();
+    public abstract void cancel();//cancel可以真正将key移除集合，也就是客户端断开这种情况
 
 
     // -- Operation-set accessors --
