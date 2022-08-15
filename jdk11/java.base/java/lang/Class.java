@@ -2185,8 +2185,8 @@ public native boolean isArray();
  * can be converted via an identity conversion or a widening
  * reference conversion (i.e. if either the receiver or the 
  * argument represent primitive types, only the identity 
- * conversion applies).
- *
+ * conversion applies).备:argument可以被直接或widen ref conversion 成receiver，则返回true
+ * https://docs.oracle.com/javase/specs/jls/se10/html/jls-5.html 这里面有解释conversion的概念
  * @return		<code>true</code>
  *					the argument can be assigned into the receiver
  *              <code>false</code> 
